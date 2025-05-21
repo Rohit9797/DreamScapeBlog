@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Latest Posts</h2>
+  <ul>
+    {% for post in posts %}
+      <li><a href="/post/{{ post.slug }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
